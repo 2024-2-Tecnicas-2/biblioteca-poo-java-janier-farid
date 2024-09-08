@@ -1,19 +1,18 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
+import com.mycompany.biblioteca.java.Revista;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class RevistaTest {
-    // TODO Adiciona tus pruebas unitarias aquí.
-    // Los métodos deben estar anotados con la anotación @Test. Por ejemplo:
-    //
-//    @Test
-//    public void testMultiplicarPositivos() {
-//        int valorEsperado = 15;
-//        CuentaBancaria miCuenta = new CuentaBancaria();
-//        int valorActual = miCuenta.multiplicar(3, 5);
-//        assertEquals(valorEsperado, valorActual);
-//    }
+
+    @Test
+    public void testMostrarInfo() {
+        Revista revista = new Revista("Alquimista", 2021, 65, "Forbes");
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        revista.mostrarInfo();
+        String expected = "El titulo es: Alquimista Año publicacion: 2021 Numero revista: 65 Nombre revista: Forbes\n";
+        assertEquals(expected, outContent.toString());
+    }
 }

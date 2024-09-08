@@ -1,19 +1,18 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
+import com.mycompany.biblioteca.java.Publicacion;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class PublicacionTest {
-    // TODO Adiciona tus pruebas unitarias aquí.
-    // Los métodos deben estar anotados con la anotación @Test. Por ejemplo:
-    //
-//    @Test
-//    public void testMultiplicarPositivos() {
-//        int valorEsperado = 15;
-//        CuentaBancaria miCuenta = new CuentaBancaria();
-//        int valorActual = miCuenta.multiplicar(3, 5);
-//        assertEquals(valorEsperado, valorActual);
-//    }
+
+    @Test
+    public void testMostrarInfo() {
+        Publicacion publicacion = new Publicacion("Prueba", 2022);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        publicacion.mostrarInfo();
+        String expected = "El titulo es: Prueba Año publicacion: 2022\n";
+        assertEquals(expected, outContent.toString());
+    }
 }

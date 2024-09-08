@@ -1,19 +1,18 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
+import com.mycompany.biblioteca.java.Libro;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class LibroTest {
-    // TODO Adiciona tus pruebas unitarias aquí.
-    // Los métodos deben estar anotados con la anotación @Test. Por ejemplo:
-    //
-//    @Test
-//    public void testMultiplicarPositivos() {
-//        int valorEsperado = 15;
-//        CuentaBancaria miCuenta = new CuentaBancaria();
-//        int valorActual = miCuenta.multiplicar(3, 5);
-//        assertEquals(valorEsperado, valorActual);
-//    }
+
+    @Test
+    public void testMostrarInfo() {
+        Libro libro = new Libro("El señor de los anillos", 2020, "KL Leonor", 500);
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+        libro.mostrarInfo();
+        String expected = "El titulo es: El señor de los anillos Año publicacion: 2020 Autor: KL Leonor Número de páginas: 500\n";
+        assertEquals(expected, outContent.toString());
+    }
 }
