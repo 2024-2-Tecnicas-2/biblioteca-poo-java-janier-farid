@@ -7,7 +7,7 @@ public class Principal {
         libro1.mostrarInfo();
         
         Revista revista1 = new Revista ("Alquimista",2021,65,"Forbes");
-        String mostrarInfo = revista1.mostrarInfo();
+        revista1.mostrarInfo();
         
     }
 }

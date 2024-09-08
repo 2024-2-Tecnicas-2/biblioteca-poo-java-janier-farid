@@ -13,8 +13,8 @@ public class Revista extends Publicacion {
     }
 
     @Override
-    public String mostrarInfo() {
-        return super.mostrarInfo()+"Numero revista: "+NumeroRevista+ "Nombre revista: "+NombreRevista;
+    public void mostrarInfo() {
+        super.mostrarInfo(); System.out.println("Numero revista: "+NumeroRevista+ "Nombre revista: "+NombreRevista);
     }
 
 }

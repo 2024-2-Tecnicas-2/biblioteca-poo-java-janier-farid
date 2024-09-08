@@ -9,10 +9,8 @@ private int yearPublicacion;
         this.yearPublicacion = yearPublicacion;
     }
 
-    public String mostrarInfo(){
-        return "El titulo es: "+titulo+ "Año publicacion: "+yearPublicacion;
-        
-        
+    public void  mostrarInfo(){
+        System.out.println("El titulo es: "+titulo+ "Año publicacion: "+yearPublicacion);     
     }
 
 

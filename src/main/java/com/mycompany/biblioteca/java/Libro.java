@@ -12,9 +12,10 @@ public class Libro extends Publicacion{
     }
     
     @Override
-    public String mostrarInfo() {
-        return super.mostrarInfo()+"El autro es: "+autor+ "Numero de paginas: "+NumeroPaginas;
+    public void mostrarInfo() {
+     super.mostrarInfo(); System.out.println("El autor es: "+autor+ "Numero de paginas: "+NumeroPaginas);
     }
 
+  
     
 }
