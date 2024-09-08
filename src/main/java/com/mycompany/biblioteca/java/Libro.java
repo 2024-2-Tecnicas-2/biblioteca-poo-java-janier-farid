@@ -13,7 +13,7 @@ public class Libro extends Publicacion{
     
     @Override
     public void mostrarInfo() {
-     super.mostrarInfo(); System.out.println("El autor es: "+autor+ "Numero de paginas: "+NumeroPaginas);
+     super.mostrarInfo(); System.out.println("El autor del libro es: "  +autor+ "/ Numero de paginas del libro: " +NumeroPaginas);
     }
 
   

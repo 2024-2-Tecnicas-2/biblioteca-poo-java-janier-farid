@@ -10,7 +10,7 @@ private int yearPublicacion;
     }
 
     public void  mostrarInfo(){
-        System.out.println("El titulo es: "+titulo+ "Año publicacion: "+yearPublicacion);     
+        System.out.println("El titulo es: " +titulo+ " / year publicacion: " +yearPublicacion);     
     }
 
 
