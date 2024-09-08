@@ -1,5 +1,20 @@
 package com.mycompany.biblioteca.java;
 
-public class Revista {
-    // TODO: Aquí va el código que inicializa tu aplicación.
+public class Revista extends Publicacion {
+    
+    private int NumeroRevista;
+    private String NombreRevista;
+    
+    public Revista(String titulo, int yearPublicacion,int NumeroRevista,String NombreRevista) {
+        super(titulo, yearPublicacion);
+        this.NumeroRevista = NumeroRevista;
+        this.NombreRevista = NombreRevista;
+        
+    }
+
+    @Override
+    public String mostrarInfo() {
+        return super.mostrarInfo()+"Numero revista: "+NumeroRevista+ "Nombre revista: "+NombreRevista;
+    }
+
 }
